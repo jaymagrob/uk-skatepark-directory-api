@@ -1,0 +1,13 @@
+.hero, body {
+  background-image: url('/assets/bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.popup {
+  max-width: 200px;
+}
