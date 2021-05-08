@@ -1,5 +1,5 @@
 import React from 'react'
-const WineForm = ({  data, handleChange, handleSubmit }) => {
+const SkateForm = ({  data, handleChange, handleSubmit }) => {
   return (
     <div className="box">
       <div className="columns">
@@ -24,9 +24,9 @@ const WineForm = ({  data, handleChange, handleSubmit }) => {
               <textarea 
                 className="textarea"
                 placeholder="Detail"
-                name="name"
+                name="detail"
                 onChange={handleChange}
-                value={data.name}
+                value={data.detail}
               ></textarea>
             </div>
           </div>
@@ -39,28 +39,40 @@ const WineForm = ({  data, handleChange, handleSubmit }) => {
                 placeholder="Image"
                 name="image"
                 onChange={handleChange}
-                value={data.name}
+                value={data.image}
               />
             </div>
           </div>
+
           <div className="field">
-            <label className="label">Location</label>
-            <div className="field is-grouped is-grouped-centered">
-              <p className="control">
-                <a className="button is-primary">
-    
-                </a>
-              </p>
-              <p className="control">
-                <a className="button is-light">
-    
-                </a>
-              </p>
+            <label className="label">Longitute</label>
+            <div className="control">
+              <input 
+                type="number"
+                max="180"
+                min="-180"
+                className="input"
+                placeholder="Longitute"
+                name="locationLng"
+                onChange={handleChange}
+                value={data.locationLng}
+              />
             </div>
-
-
           </div>
 
+          <div className="field">
+            <label className="label">Latitute</label>
+            <div className="control">
+              <input 
+                type="number"
+                className="input"
+                placeholder="Latitute"
+                name="locationLat"
+                onChange={handleChange}
+                value={data.locationLat}
+              />
+            </div>
+          </div>
         
           <div className="control">
             <label className="label">Cost of Entry</label>
@@ -212,10 +224,7 @@ const WineForm = ({  data, handleChange, handleSubmit }) => {
               </select>
             </div>
           </div>
-
-       
-
-
+  
           <div className="field">
             <button type="submit" className="button is-fullwidth is-danger">Submit my park</button>
           </div>
@@ -224,5 +233,5 @@ const WineForm = ({  data, handleChange, handleSubmit }) => {
     </div>
   )
 }
-export default WineForm
+export default SkateForm
 
